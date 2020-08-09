@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private val RQ_SPEECH_REC = 100
+    private val RQ_SPEECH_REC = 102
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == RQ_SPEECH_REC && resultCode == Activity.RESULT_OK){
-            val result = data?.getStringArrayExtra(RecognizerIntent.EXTRA_RESULTS)
+            val result = data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
             textView_speech.text = result?.get(0).toString()
         }
     }
