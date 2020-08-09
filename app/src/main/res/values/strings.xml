@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpeechToText</string>
+    <string name="tap_and_speak">Tap and Speak</string>
+    <string name="your_speech_text">Your speech text</string>
+</resources>
