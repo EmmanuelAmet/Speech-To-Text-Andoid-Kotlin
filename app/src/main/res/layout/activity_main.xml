@@ -10,6 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
+        android:clickable="true"
+        android:fadingEdge="horizontal"
         android:padding="5dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="10dp"
@@ -19,15 +21,18 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_record">
 
         <ScrollView
-            android:padding="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
             <TextView
                 android:id="@+id/textView_speech"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/your_speech_text"/>
+                android:autoText="true"
+                android:clickable="true"
+                android:text="@string/your_speech_text" />
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
